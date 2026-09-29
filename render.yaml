@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nutrivision-ai
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: HF_HOME
+        value: /app/.cache/huggingface
